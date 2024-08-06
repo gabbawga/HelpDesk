@@ -1,7 +1,7 @@
 html, body {
     height: 100%;
     margin: 0;
-  }
+}
 .container-fluid {
     display: grid;
     place-items: center;
@@ -10,6 +10,61 @@ html, body {
 #main {
     width: 1022px;
     height: 580px;
-    background-color: #0D688C;
+    background-color: #0C506B;
     border-radius: 5px;
+    display: flex; /* Flex container for sidebar and content */
+}
+
+#sidebar {
+    width: 62px; /* Define a largura do sidebar conforme necessário */
+    height: 100%;
+    background-color: #0D688C;
+    padding: 10px; /* Espaçamento interno para os itens */
+    box-sizing: border-box; /* Inclui padding e border na largura total */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza horizontalmente */
+    gap: 10px; /* Espaçamento entre os itens */
+}
+
+#sidebar  li:first-child img {
+    display: block;
+    margin: 0 auto; /* Centraliza a imagem horizontalmente */
+    border-bottom: 2px solid white; /* Linha branca abaixo da imagem */
+    padding-bottom: 10px; /* Espaçamento interno abaixo da imagem */
+}
+
+#sidebar .nav-item {
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente o conteúdo do item */
+    align-items: center; /* Centraliza verticalmente o conteúdo do item */
+    width: 100%;
+    padding: 5px 0; /* Espaçamento interno dos itens */
+}
+
+#sidebar .nav-item a {
+    text-align: center; /* Centraliza o texto */
+    color: white; /* Define a cor do texto */
+    text-decoration: none; /* Remove sublinhado dos links */
+    width: 100%;
+    margin-right: 25px;
+}
+
+#sidebar .ultimo-item {
+    margin-top: 150px; /* Empurra o último item para o final */
+}
+
+#content {
+    flex-grow: 1; /* Permite que o conteúdo cresça para ocupar o espaço disponível */
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente o conteúdo dentro do #main */
+    align-items: center; /* Centraliza verticalmente o conteúdo dentro do #main */
+}
+
+#content > .inner-content {
+    width: 800px;
+    height: 450px;
+    background-color: #0D688C; /* Cor de fundo da div interna */
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra opcional para efeito visual */
 }
